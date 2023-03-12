@@ -1,0 +1,101 @@
+COURSEWORK 3 SQL QUERIES
+This coursework is concerned with the implementation of your relational schema using a DBMS (livesql for this year).
+
+Submission is via groups (up to 4 students). You can carry on with the CW-2 group, or split into smaller groups, and individual submissions are also supported. Watch the announcement for uploading your submission.
+
+Time frame: work on your submission in the labs, week-10 to week-12 (after CW-2 feedback). There are supporting exercises (exercise-6 to exercise-8) to guide you regarding data upload and advanced queries.
+
+
+
+
+You should base your implementation on the scenario you chose for CW-2. In case students form a group who have worked on Eurostar and Covid, then choose one of the scenarios.
+
+Schema update: Your CW-3 schema will be slightly different from from CW-2 result. It is a normal evolution of the DB schema that you will find that you need to add attributes or even tables for processing the queries.
+
+
+Students who have not submitted CW-2, can choose the investment scenario (on QMPlus page). As there were questions by email, this means that only those students who did not submit (or did not participate) can choose the investment scenario provided. For those students, there is an alternative marking scheme, as the create table statements are provided.
+
+
+The coursework should be delivered in a form so that the tables can be easily created, data inserted and queries and views can be executed easily by the person marking the work.
+
+
+
+Store all the commands (including CREATE TABLE statements) into ONE script file.
+
+It must be easy to reconstruct your entire schema of tables. This is also useful should you find data or tables have been corrupted. You can use, as a template for your create tables script, the script used to create the tables for the lab exercises. A link to this script is provided on QMPlus.
+
+You are expected to submit a single SQL script which contains: 
+
+
+A listing of all the 'create table' commands that were used to set up your database.
+The sample test data (insert statements). This test data should be carefully designed in order to test that your queries will work under any conditions.
+Eight SQL queries of varying complexity.
+Two basic queries: conditions (includes join conditions)
+Three medium queries: joins, functions, group by, order by
+Three advanced queries: subqueries, having, views, aggregates, outer joins
+Where medium queries involve basic concepts (conditions), and advanced queries involve medium concepts (joins over several relations, functions, etc).
+
+Cardinalities of tables: 10-20 tuples in the main tables (e.g. 10 trains, 10 members of staff).
+
+Marks will be awarded for use of a wide range of SQL language constructs. A query, in this context, consists of both the English explanation of what the query is intended to do AND the SQL query itself.
+
+A SQL script should be the sole submission for this coursework but it should include listings of ouptuts for the queries as comments.
+
+Structure SQL script file:
+
+List of the group members; name and student-id; CW-2 group
+Any comments describing the submission
+The SQL commands including create table, inserts, views, and queries.
+
+
+Failure to include this will result in a reduced mark. Note that it is essential that you test the building of the database and the execution of the queries so that they match the included output listing. If the script does not execute or does not show the result expected, then there will be a severe penalty to the mark awarded.
+
+
+
+Example of different Query Difficulties
+
+Consider the following schema
+
+estateagent(Id , Name, PhoneNumber)
+office ( Id , AgentId, Area, District , Sector, Unit , PhoneNumber)
+property(Id , Area, District , Sector, Unit ,City , Price, Type, NumBedrooms, Description)
+# Type: house or flat
+# Description: a text attribute
+customer(Id, Name, PhoneNumber)
+forSale(PropertyId, OfficeId )
+forRent(PropertyId, OfficeId ) ;
+sold(PropertyId, OfficeId , CustomerId);
+# To understand the semantics of Area, District , Sector and Unit
+# we consider the respective part of the conceptual model:
+# office (Postcode, PhoneNumber, OpeningHours)
+# Postcode is a composite attribute 
+# postcode = (Area, District , Sector, Unit)
+# For example:
+# E1 4NS becomes
+# Area=”E”, District =”1”, Sector=”4”, Unit=”NS”
+
+Examples of basic queries include:
+Show the names of agents and the phone numbers of the offices that have 2-bedroom flats for sale with post codes with the area of E and district of 1.
+Show the average of the prices for 2-bedroom flats for sale by estate agent “Fox”.
+Examples of medium queries include
+Show all agents (name and phone number) who have 1-bedroom and 2-bedroom flats for sale in London.
+Show the average price of 1-bedroom flats in London E1.
+Show the difference between the average price for 1-bedroom flats in post code E1 and post code W1.
+Examples of advanced queries include:
+Show the id of offices who have the more than one hundred properties for sale in the same area the office is located in.
+List the estate agents with average price for a 1-bed flat, and show the difference between the average of the agent and the average over all agents.
+
+
+
+
+Marking scheme:
+
+4 marks for Create Table (2 marks) and Insert statements (2 marks).
+
+5 marks for basic and medium (1 mark per query)
+
+6 marks for advanced (2 marks per query)
+
+Total: 15 marks
+
+Note that your script MUST execute without problems on livesql.
