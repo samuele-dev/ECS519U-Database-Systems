@@ -1,0 +1,47 @@
+COURSEWORK 2: DB DESIGN, ER (ENTITY RELATIONSHIP) MODEL AND RM (RELATIONAL MODEL)
+This is a group coursework. A groups consists of 2 to 4 students.
+
+When submitting as a group only one student should submit. Note that submission can be overwritten by any group member.
+
+If you have not joined your group,  you may not receive marks for the submission.
+
+Make sure you are in the correct group before the submission.
+
+
+
+This deliverable is concerned with the design of the database.
+
+
+
+Your report should contain the following components:
+
+A list of reasonable assumptions you have made for your design (3 marks)
+The ER model described in textual form (4 marks)
+The ER diagram (4 marks)
+The relational database schema (4 marks).
+You need to show how you translate the ER model into the relational schema.
+You should clearly indicate the primary and foreign keys. Also, explain where normalisation is required, and transform the model where required such that your design is in 3rd Normal Form.
+
+The submission consists of exactly one PDF file to be uploaded to QMPlus.
+
+
+- Title page with group members; confirm on the page that all of the members participated, or explain otherwise
+
+- Section with assumptions / requirements analysis
+
+- Section showing the ER model in textual form: entities and relationships with attributes
+
+- Section showing the ER model as diagram
+
+- Section showing the relational model as it follows from the conceptual model
+
+- Explanations on normalisation steps, and where applies, the new tables
+
+
+
+
+Your group will need to choose one of the following topics for your team coursework:
+
+- Eurostar 2030: Train, Journey and Staff Management System
+
+- Covid Pandemic Response & Decision-support System
